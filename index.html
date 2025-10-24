@@ -1,38 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="icon" type="image/png" href="./imgs/logo-mario.png" />
-    <title>Mario Jump</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="./imgs/logo-mario.png" />
+  <title>Mario Jump</title>
+</head>
+
+<body>
   <div class="gameBoard">
-      <div id="jumpCounter" class="jumpCounter">Score: 0</div>
+    <div id="jumpCounter" class="jumpCounter">Score: 0</div>
 
-      <img src="./imgs/clouds.png" alt="" class="clouds" />
-      <img src="./imgs/pipe.png" alt="" class="pipe" />
-      <img src="./imgs/mario.gif" alt="" class="mario" />
-      <div
-        id="gameOverMsg"
-        class="gameOverMsg"
+    <img src="./imgs/clouds.png" alt="" class="clouds" />
+    <img src="./imgs/pipe.png" alt="" class="pipe" />
+    <img src="./imgs/mario.gif" alt="" class="mario" />
 
-      >
-        <img src="./imgs/game-over.png" alt="Game Over" style="width:80px;margin-bottom:16px;" />
-  <h2>Game Over</h2>
-  <p id="gameOverScore" style="font-size:1.1rem;margin:6px 0 0 0;color:#fff;">Seu score: 0</p>
-        <button
-          id="restartBtn"
-          class="restartBtn"
-        >
-          Jogar novamente
-        </button>
-      </div>
+    <div id="gameOverMsg" class="gameOverMsg">
+      <h1 class="game-over-title">GAME OVER</h1>
+      <div class="character-sprite"></div>
+
+      <p id="gameOverScore">
+        Seu score: 0
+      </p>
+      <button id="restartBtn" class="restartBtn">JOGAR NOVAMENTE</button>
     </div>
-    <footer class="footer">
-      © 2025 Raquel Cadete. Todos os direitos reservados.
-    </footer>
-    <script src="./js/script.js" defer></script>
-  </body>
+  </div>
+  <footer class="footer">
+    © 2025 Raquel Cadete. Todos os direitos reservados.
+  </footer>
+  <script src="./js/script.js" defer></script>
+</body>
+
 </html>

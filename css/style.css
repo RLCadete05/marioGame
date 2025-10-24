@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  font-family: "Press Start 2P", cursive;
+}
 .gameBoard {
   width: 100vw;
   height: calc(100vh - 42.4px); /* 56px = altura do footer */
@@ -36,25 +38,23 @@
   width: 550px;
   top: 50px;
   animation: cloudsAnimation 20s linear infinite;
-
-
 }
-.jumpCounter{
+.jumpCounter {
   position: fixed;
   top: 12px;
   left: 12px;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 8px 12px;
   border-radius: 8px;
+  font-size: 1.2rem;
   font-weight: 600;
-  z-index: 50;
 }
 .footer {
   width: 100vw;
   text-align: center;
   padding: 16px 0 8px 0;
-  font-size: 1rem;
+  font-size: 0.75rem;
   color: #ffffff;
   background: #2f2f2f;
   position: fixed;
@@ -69,23 +69,96 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  background: #1a1a2e; 
   padding: 32px 40px;
   border-radius: 16px;
   z-index: 20;
   text-align: center;
+  border: 4px solid #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.3);
+  filter: brightness(1.2);
 }
+
+/* .gameOverMsg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: -1;
+  opacity: 0.5;
+} */
+
+.game-over-title {
+  font-size: 2.2em;
+  color: #cf243c; 
+  text-shadow: 0 0 5px #cf243c, 0 0 10px #cf243c, 0 0 20px #cf243c,
+    0 0 40px rgba(207, 0, 36, 60);
+  margin-bottom: 15px;
+  animation: pulse 1.5s infinite alternate;
+}
+
+.character-sprite {
+  width: 64px;
+  height: 64px;
+  margin: 10px auto 10px;
+  background-image: url("../imgs/game-over.png");
+  background-size: cover;
+  background-color: transparent; /* Apenas um placeholder visual */
+}
+
+#gameOverScore {
+  font-size: 1.2rem; 
+  margin: 8px 0;
+  color: #00ff00; 
+  text-shadow: 0 0 8px #00ff00;
+}
+
 .restartBtn {
   margin-top: 16px;
-  padding: 8px 24px;
-  font-size: 1.2rem;
-  border: none;
+  padding: 10px 24px; 
+  font-size: 1rem; 
+  border: 2px solid #00ffff;
   border-radius: 8px;
-  background: #5fc9f8;
-  color: #222;
+  background: #00ffff;
+  color: #1a1a2e; 
   cursor: pointer;
+  font-family: "Press Start 2P", cursive; 
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
 }
+
+.restartBtn:hover {
+  background-color: #00e6e6;
+  transform: scale(1.05); 
+  box-shadow: 0 0 15px rgba(0, 255, 255, 1);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
 @keyframes pipeAnimation {
   from {
     right: -80px;

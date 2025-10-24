@@ -41,6 +41,8 @@ const loop = setInterval(() => {
     const gameOverMsg = document.getElementById("gameOverMsg");
     const restartBtn = document.getElementById("restartBtn");
     const gameOverScore = document.getElementById("gameOverScore");
+    mario.style.filter = "grayscale(100%) brightness(1.5)";
+    
     if (gameOverScore) gameOverScore.textContent = `Seu score: ${jumps}`;
     gameOverMsg.style.display = "block";
     restartBtn.onclick = () => {
